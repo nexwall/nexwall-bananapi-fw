@@ -37,3 +37,11 @@ binaries; the recipes pin one SHA-256 per architecture and stop the build when a
 ## License
 
 Same as `nexwall/firewall-msp` (see `LICENSE` and `NOTICE.md`).
+
+## Relation to `nexwall/firewall-msp`
+
+`firewall-msp` is the original and stays the source of truth. This repository is `firewall-msp` plus a short series of commits
+(Filogic target, board profiles, per-architecture vendor pins, Wi-Fi stack, WAN fallback). To follow a new upstream version run
+`scripts/sync-upstream.sh`: it fetches upstream main and rebases the series onto it, then lists what to check (vendor pins, plugin
+ABI, new kernel symbols). Never edit upstream files for a board-specific reason when a profile or a new file will do: it keeps the
+rebase small.
