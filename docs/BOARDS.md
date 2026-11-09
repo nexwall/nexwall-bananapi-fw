@@ -7,7 +7,7 @@
 | WAN fallback | `ns-wan-fallback`: static 192.168.0.2/24, gateway 192.168.0.1, DNS 192.168.0.1 and 8.8.8.8 when DHCP gives no lease |
 | Web proxy | Squid with SSL bump and ICAP (`config/squid.conf`) |
 | Traffic classification | `netifyd`; its proprietary plugins are enabled per architecture once a build for `aarch64` is pinned |
-| Antivirus engines | off in the lite profile (`NEXWALL_WEBPROTECTION_AV=n`); to be enabled per board after RAM measurements |
+| Antivirus engines | included in every profile (ClamAV, freshclam, YARA); verified to run with 2 GB of RAM (owner, 2026-11-09) |
 | Defconfig drop check | `config/targets/mediatek_filogic.expected-drops`: a requested symbol that `make defconfig` drops and is not listed stops the build |
 
 Board profiles live in `config/profiles/`. Adding a board: copy a profile, set the device name of the OpenWrt
