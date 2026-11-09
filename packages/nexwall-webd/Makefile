@@ -20,9 +20,9 @@ PKG_MAINTAINER:=Nexwall
 # See nexwall-internal/msp/WEB_PROTECTION.md and the license token notes (DPI_PLUGIN_LICENSE_TOKEN.md).
 WEBD_FEED_VERSION:=1.5.0
 WEBD_FEED_SHA256_x86_64:=41444b8f8a33634dc383e71c7d67d8d3703fe474ce7b3b1361756acb54d19406
-WEBD_FEED_SHA256_aarch64:=cd1133dfddc2f3de124a82ff3ff2035f3cf9cd00c6f7bfa2e958480b9f5190e5
+WEBD_FEED_SHA256_aarch64:=23f064791a305c3f9aaff3f00b3d23f8f44df78f6523c5bfe8f5251710534c53
 WEBD_FEED_SHA256_arm:=d0096db3f7169944b8a8c8935cbe23d259daa6b37454ffc9f6580d4bc5504e7f
-WEBD_FEED:=https://updates.nexwall.com.br/vendor/stable
+WEBD_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
 
 # One pinned build per architecture. An option that is on for an architecture without a pin stops the build:
 # a silent fallback would ship an unlicensed community build.

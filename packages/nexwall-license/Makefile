@@ -22,13 +22,13 @@ PKG_LICENSE:=GPL-2.0-only
 # Versions differ per architecture: x86_64 follows the main product; the ARM builds (aarch64, arm) are pinned to the
 # last core built for them. Publish an ARM build of a newer core, then bump its pin here.
 VENDOR_CORE_VERSION_x86_64:=1.9.0
-VENDOR_CORE_VERSION_aarch64:=1.7.1
+VENDOR_CORE_VERSION_aarch64:=1.9.0
 VENDOR_CORE_VERSION_arm:=1.7.1
 VENDOR_CORE_VERSION:=$(VENDOR_CORE_VERSION_$(ARCH))
 VENDOR_CORE_SHA256_x86_64:=3dcaaea51b06fa3f13a1cc51df9ce4ce0b8b49fb8b4cffb423f1502fedb59733
-VENDOR_CORE_SHA256_aarch64:=ebce79bc340f6def8d2120670849fed5533399452f99524cb66a084a1ab43175
+VENDOR_CORE_SHA256_aarch64:=375de1e3bc66078b8ded7199a8d4c97a3e5591a4535f3d8729c55ce6fe4aa578
 VENDOR_CORE_SHA256_arm:=dcbb29ffc10b0164cf7037e019a88eeff99bea86b30e40d289bf5c9e7238332c
-VENDOR_FEED:=https://updates.nexwall.com.br/vendor/stable
+VENDOR_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
 
 # One pinned build per architecture. An option that is on for an architecture without a pin stops the build:
 # a silent fallback would ship an unlicensed community build.

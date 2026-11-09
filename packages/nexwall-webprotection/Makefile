@@ -15,8 +15,8 @@ PKG_VERSION:=0.5.3
 PKG_RELEASE:=10
 
 WP_FEED_VERSION:=0.10.0
-WP_FEED_SHA256:=f12b7d7dc7ec5efe0026e25bbb1bf9b96bb7ea22ad6094be7a24ab28ceeb920b
-WP_FEED:=https://updates.nexwall.com.br/vendor/stable
+WP_FEED_SHA256:=1fd2f0e829b917a958318ffd8ac76c6fed40a0fa66d798d8fae2a200e75482e4
+WP_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
 
 PKG_SOURCE:=nexwall-webprotection_$(WP_FEED_VERSION)_all.tar.gz
 PKG_SOURCE_URL:=$(WP_FEED)/all
