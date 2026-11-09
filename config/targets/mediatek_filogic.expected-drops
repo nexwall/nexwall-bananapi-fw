@@ -6,6 +6,7 @@ CONFIG_OPENVPN_openssl_ENABLE_DEF_AUTH=y
 CONFIG_OPENVPN_openssl_ENABLE_MULTIHOME=y
 CONFIG_PACKAGE_clamav=y
 CONFIG_PACKAGE_freshclam=y
+CONFIG_PACKAGE_kmod-lib-crc16=m
 CONFIG_PACKAGE_kmod-usb-core=m
 CONFIG_PACKAGE_libpcre=y
 CONFIG_PACKAGE_luci-app-wireguard=y
