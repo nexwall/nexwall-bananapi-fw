@@ -110,6 +110,10 @@ else
     echo "No local vendor packages in $VENDOR_LOCAL_DIR: the recipes will try the vendor feed and stop if a pinned file is missing"
 fi
 
+# sendmail (libmilter for ClamAV) installs sendmail.cf with mode 0444 and fails with "Permission denied" when OpenWrt re-runs its
+# compile over an existing install directory. Drop its build directory so it is always rebuilt from scratch (about 2 minutes).
+podman run --rm --entrypoint sh --volume "${VOL_PREFIX}_build:/b" "$IMAGE_NAME" -c 'rm -rf /b/target-*/sendmail-*' >/dev/null 2>&1 || true
+
 set +e
 
 status=0
