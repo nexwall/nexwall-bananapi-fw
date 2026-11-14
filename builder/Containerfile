@@ -55,6 +55,8 @@ RUN git clone https://github.com/openwrt/openwrt.git \
 WORKDIR /home/buildbot/openwrt
 RUN sed -i '/routing/d' feeds.conf.default \
     && sed -i '/video/d' feeds.conf.default
+# Test track: core and kernel from OpenWrt main, package feeds kept on the 25.12 branch (userspace known to work with our patches)
+RUN sed -i 's#^\(src-git \(packages\|luci\|telephony\) .*\)$#\1;openwrt-25.12#' feeds.conf.default
 RUN ./scripts/feeds update -a
 COPY --chmod=777 builder/apply-patches.sh /usr/local/bin/apply-patches
 COPY --chown=buildbot:buildbot patches patches

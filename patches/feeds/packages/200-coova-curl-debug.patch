@@ -6,8 +6,8 @@ index ece113869..bc3d79a5a 100644
    SUBMENU:=Captive Portals
    SECTION:=net
    CATEGORY:=Network
--  DEPENDS:=+kmod-tun +COOVACHILLI_MINIPORTAL:haserl \
-+  DEPENDS:=+kmod-tun +libcurl +zlib +COOVACHILLI_MINIPORTAL:haserl \
+-  DEPENDS:=+kmod-tun +librt +COOVACHILLI_MINIPORTAL:haserl \
++  DEPENDS:=+kmod-tun +librt +libcurl +zlib +COOVACHILLI_MINIPORTAL:haserl \
    +COOVACHILLI_WOLFSSL:libwolfssl +COOVACHILLI_OPENSSL:libopenssl \
    +COOVACHILLI_JSONINTERFACE:libjson-c
    TITLE:=Wireless LAN HotSpot controller (Coova Chilli Version)
