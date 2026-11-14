@@ -67,6 +67,14 @@ RUN ./scripts/feeds update nethsecurity
 RUN ./scripts/feeds install -a
 # Test track: main core now defines the scanner group (package/system/hardware-support); the 25.12 sane-backends feed package defines it too. Scanner support is not used, so drop the package.
 RUN rm -rf feeds/packages/utils/sane-backends package/feeds/packages/sane-backends
+# Test track: drop any other feed package whose user/group id clashes with main core (logged to dropped-packages.txt)
+RUN for i in $(seq 1 60); do \
+      out=$(make prepare-tmpinfo 2>&1) && break; \
+      p=$(echo "$out" | grep -m1 "collides" | sed "s#: .*##; s#/Makefile##"); \
+      if [ -z "$p" ]; then echo "$out" | tail -30; exit 1; fi; \
+      echo "dropping $p (id clash with main core)" | tee -a /home/buildbot/dropped-packages.txt; \
+      rm -rf "$(readlink -f "$p")" "$p"; \
+    done; cat /home/buildbot/dropped-packages.txt 2>/dev/null || true
 COPY --chown=buildbot:buildbot files files
 COPY --chown=buildbot:buildbot config config
 
