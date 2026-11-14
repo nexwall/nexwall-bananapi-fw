@@ -65,6 +65,8 @@ RUN sed -i '1isrc-link nethsecurity /home/buildbot/openwrt/nspackages' feeds.con
 COPY --chown=buildbot:buildbot packages nspackages
 RUN ./scripts/feeds update nethsecurity
 RUN ./scripts/feeds install -a
+# Test track: main core now defines the scanner group (package/system/hardware-support); the 25.12 sane-backends feed package defines it too. Scanner support is not used, so drop the package.
+RUN rm -rf feeds/packages/utils/sane-backends package/feeds/packages/sane-backends
 COPY --chown=buildbot:buildbot files files
 COPY --chown=buildbot:buildbot config config
 
