@@ -50,7 +50,8 @@ USER buildbot
 WORKDIR /home/buildbot
 # OpenWRT repo
 ARG OWRT_VERSION
-RUN git clone --branch "${OWRT_VERSION}" https://github.com/openwrt/openwrt.git
+RUN git clone https://github.com/openwrt/openwrt.git \
+    && git -C openwrt checkout "${OWRT_VERSION}"
 WORKDIR /home/buildbot/openwrt
 RUN sed -i '/routing/d' feeds.conf.default \
     && sed -i '/video/d' feeds.conf.default

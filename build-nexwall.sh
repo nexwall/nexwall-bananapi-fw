@@ -44,7 +44,7 @@ MAKE_JOBS=${MAKE_JOBS:-}
 case "$TARGET" in
     x86*) echo "ERROR: $TARGET is an x86 target; x86 is built from the main repository" >&2; exit 1 ;;
 esac
-BUILDER_PREFIX=nexwall-bananapi
+BUILDER_PREFIX=nexwall-bananapi-main
 IMAGE_NAME="${BUILDER_PREFIX}-next"
 CONTAINER_NAME="${BUILDER_PREFIX}-builder"
 VOL_PREFIX="nexwall_bananapi_builder_${OWRT_VERSION}_${TARGET}"
