@@ -1,0 +1,13 @@
+diff --git a/lang/python/python3/Makefile b/lang/python/python3/Makefile
+--- a/lang/python/python3/Makefile
++++ b/lang/python/python3/Makefile
+@@ -296,7 +296,9 @@
+ # Bypass configure test. Force every curses header check Python's
+ # configure.ac runs to "no" so the host distro's headers stay out.
+ HOST_CONFIGURE_VARS += \
+ 	py_cv_module__tkinter=n/a \
++	py_cv_module__curses=n/a \
++	py_cv_module__curses_panel=n/a \
+ 	ac_cv_working_openssl_hashlib=yes \
+ 	ac_cv_header_curses_h=no \
+ 	ac_cv_header_ncurses_h=no \
