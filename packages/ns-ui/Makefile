@@ -12,10 +12,10 @@ PKG_NAME:=ns-ui
 # UI_FEED_VERSION. To ship a new UI: release it (scripts/release-feed.sh in the UI repository), then bump
 # UI_FEED_VERSION and UI_FEED_SHA256 here and PKG_RELEASE.
 PKG_VERSION:=2.24.1
-PKG_RELEASE:=42
+PKG_RELEASE:=43
 
-UI_FEED_VERSION:=3.2.0
-UI_FEED_SHA256:=6ed6db2e4a91f59439f8962efd531bffa62ff3f0168a6a97babeac43c509092c
+UI_FEED_VERSION:=3.2.1
+UI_FEED_SHA256:=8899dcfde20df859d759e932bebe4ab008079140a56cfd140441f9b96df95141
 UI_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
 
 PKG_SOURCE:=nexwall-ui_$(UI_FEED_VERSION)_all.tar.gz
