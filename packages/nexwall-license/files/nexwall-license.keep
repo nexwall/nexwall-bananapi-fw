@@ -6,3 +6,4 @@
 /etc/nexwall-license/license.json
 /etc/nexwall-license/first_seen
 /etc/nexwall-license/feed_serial
+/etc/nexwall-oem/oem.nxo

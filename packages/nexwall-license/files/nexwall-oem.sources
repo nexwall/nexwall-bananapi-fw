@@ -1,0 +1,4 @@
+# Where a board looks for its OEM brand file (<hwid>.nxo) when it has none yet. USB drives (/mnt/*/nexwall-oem/) are
+# always tried first. One entry per line: http://, ftp:// or a directory. Used only at boot, only until a file is applied.
+http://192.168.1.10/nexwall-oem/
+ftp://192.168.1.10/nexwall-oem/

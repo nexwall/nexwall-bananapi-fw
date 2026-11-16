@@ -8,7 +8,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nexwall-license
 PKG_VERSION:=1.1.0
-PKG_RELEASE:=5
+PKG_RELEASE:=6
 
 PKG_MAINTAINER:=Nexwall
 PKG_LICENSE:=GPL-2.0-only
@@ -22,11 +22,11 @@ PKG_LICENSE:=GPL-2.0-only
 # Versions differ per architecture: x86_64 follows the main product; the ARM builds (aarch64, arm) are pinned to the
 # last core built for them. Publish an ARM build of a newer core, then bump its pin here.
 VENDOR_CORE_VERSION_x86_64:=1.9.0
-VENDOR_CORE_VERSION_aarch64:=1.9.0
+VENDOR_CORE_VERSION_aarch64:=1.10.0
 VENDOR_CORE_VERSION_arm:=1.7.1
 VENDOR_CORE_VERSION:=$(VENDOR_CORE_VERSION_$(ARCH))
 VENDOR_CORE_SHA256_x86_64:=3dcaaea51b06fa3f13a1cc51df9ce4ce0b8b49fb8b4cffb423f1502fedb59733
-VENDOR_CORE_SHA256_aarch64:=375de1e3bc66078b8ded7199a8d4c97a3e5591a4535f3d8729c55ce6fe4aa578
+VENDOR_CORE_SHA256_aarch64:=4bc80f46d4d57d3b4f5c3308fcdcc7be4f94d20f621869f792a6625d213dcce3
 VENDOR_CORE_SHA256_arm:=dcbb29ffc10b0164cf7037e019a88eeff99bea86b30e40d289bf5c9e7238332c
 VENDOR_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
 
@@ -79,7 +79,7 @@ define Package/nexwall-license/install
 	if [ -f $(PKG_BUILD_DIR)/nexwall-licensed ]; then \
 		$(INSTALL_DIR) $(1)/usr/sbin; \
 		$(INSTALL_BIN) $(PKG_BUILD_DIR)/nexwall-licensed $(1)/usr/sbin/nexwall-licensed; \
-		for n in licensectl nexwall-license-register nexwall-license-enforce nexwall-serial; do \
+		for n in licensectl nexwall-license-register nexwall-license-enforce nexwall-serial nexwall-oem; do \
 			$(LN) nexwall-licensed $(1)/usr/sbin/$$$$n; \
 		done; \
 	fi
@@ -95,6 +95,11 @@ define Package/nexwall-license/install
 	# key is refused by the server until an administrator clears it
 	$(INSTALL_DIR) $(1)/lib/upgrade/keep.d
 	$(INSTALL_CONF) ./files/nexwall-license.keep $(1)/lib/upgrade/keep.d/nexwall-license
+
+	# OEM brand file (partner white label): the brand file of the board is kept across upgrades; the list of places the
+	# unit looks for it at first boot (QA bench server on the LAN side, USB) is part of this image
+	$(INSTALL_DIR) $(1)/etc/nexwall-oem
+	$(INSTALL_CONF) ./files/nexwall-oem.sources $(1)/etc/nexwall-oem/sources
 
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./files/nexwall-license-cron $(1)/etc/uci-defaults/99-nexwall-license-cron

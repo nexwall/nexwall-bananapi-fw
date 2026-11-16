@@ -9,6 +9,8 @@ start_service() {
 	# the license core is a vendor binary: present in the official image, absent in a community build
 	# (then the unit simply runs with the limited feature set)
 	[ -x /usr/sbin/nexwall-licensed ] || return 0
+	# partner brand: rebuild it from the stored brand file, or look for one (USB, QA bench server) on a unit that has none
+	[ -x /usr/sbin/nexwall-oem ] && ( /usr/sbin/nexwall-oem boot 2>&1 | logger -t nexwall-oem ) >/dev/null 2>&1 &
 	# checks in on its own schedule (retrying until the network is up), answers the rest of the system over
 	# /var/run/nexwall-license.sock, applies the entitlements and keeps itself current from the vendor feed
 	procd_open_instance
