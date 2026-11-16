@@ -26,7 +26,7 @@ PLUGIN_FEED_VERSION_aarch64:=1.0.4
 PLUGIN_FEED_VERSION:=$(PLUGIN_FEED_VERSION_$(ARCH))
 PLUGIN_FEED_SHA256_x86_64:=032da6ee342dc0afa19acf3cb75462b79e9f5dde321888ae9207aff7be11c22d
 PLUGIN_FEED_SHA256_aarch64:=abd6922727854234548bc2350c4843deadd1c35aa26af99ac2f9275d3f67f299
-PLUGIN_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
+PLUGIN_FEED:=https://service.nexwall.com.br/vendor/stable
 
 NETIFYD_ABI:=$(shell sed -n 's/^PKG_VERSION:=//p' $(CURDIR)/../netifyd/Makefile)-r$(shell sed -n 's/^PKG_RELEASE:=//p' $(CURDIR)/../netifyd/Makefile)
 

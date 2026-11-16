@@ -16,7 +16,7 @@ PKG_RELEASE:=43
 
 UI_FEED_VERSION:=3.2.1
 UI_FEED_SHA256:=8899dcfde20df859d759e932bebe4ab008079140a56cfd140441f9b96df95141
-UI_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
+UI_FEED:=https://service.nexwall.com.br/vendor/stable
 
 PKG_SOURCE:=nexwall-ui_$(UI_FEED_VERSION)_all.tar.gz
 PKG_SOURCE_URL:=$(UI_FEED)/all

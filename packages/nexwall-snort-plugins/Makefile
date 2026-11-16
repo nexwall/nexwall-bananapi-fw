@@ -21,7 +21,7 @@ PKG_MAINTAINER:=Nexwall
 PLUGIN_FEED_VERSION:=1.0.1
 PLUGIN_FEED_SHA256_x86_64:=54290609e9a704165a07d768b633f06db885fe3016ceb4b157856a53bf50bfc1
 PLUGIN_FEED_SHA256_aarch64:=81bea3f113800e0a26e17f05d9a816e2cb99cfe42020f481a9529604fd50a260
-PLUGIN_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
+PLUGIN_FEED:=https://service.nexwall.com.br/vendor/stable
 
 SNORT_ABI:=$(shell sed -n 's/^PKG_VERSION:=//p' $(CURDIR)/../snort3/Makefile)-r$(shell sed -n 's/^PKG_RELEASE:=//p' $(CURDIR)/../snort3/Makefile)
 

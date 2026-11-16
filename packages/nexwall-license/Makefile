@@ -28,7 +28,7 @@ VENDOR_CORE_VERSION:=$(VENDOR_CORE_VERSION_$(ARCH))
 VENDOR_CORE_SHA256_x86_64:=3dcaaea51b06fa3f13a1cc51df9ce4ce0b8b49fb8b4cffb423f1502fedb59733
 VENDOR_CORE_SHA256_aarch64:=3f0cf40d3ddaa7776f40980659468da70ae7a6783f15ec2dc841a0148324014a
 VENDOR_CORE_SHA256_arm:=dcbb29ffc10b0164cf7037e019a88eeff99bea86b30e40d289bf5c9e7238332c
-VENDOR_FEED:=https://updates-bananapi.nexwall.com.br/vendor/stable
+VENDOR_FEED:=https://service.nexwall.com.br/vendor/stable
 
 # One pinned build per architecture. An option that is on for an architecture without a pin stops the build:
 # a silent fallback would ship an unlicensed community build.
