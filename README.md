@@ -6,6 +6,7 @@ Derived from `nexwall/firewall-msp` (version in `build.conf.defaults`); the chan
 | Board | Profile (`PROFILE=`) | SoC | Notes |
 |---|---|---|---|
 | Banana Pi BPI-R3 | `bananapi_bpi-r3` (default) | MT7986 | 2 GiB RAM, 8 GiB eMMC |
+| Banana Pi BPI-R3 Mini | `bananapi_bpi-r3-mini` | MT7986A | 2 GiB RAM |
 | Banana Pi BPI-R4 Lite | `bananapi_bpi-r4-lite` | MT7987A | 2 GiB RAM, 8 GiB eMMC |
 | Banana Pi BPI-R4 | `bananapi_bpi-r4` | MT7988A | 4 GiB RAM, 8 GiB eMMC |
 | Banana Pi BPI-R4 (2.5GE variant) | `bananapi_bpi-r4-poe` | MT7988A | |

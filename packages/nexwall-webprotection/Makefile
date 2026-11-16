@@ -12,10 +12,10 @@ PKG_NAME:=nexwall-webprotection
 # To ship a new version: release it (scripts/release-feed.sh in the private repository), then bump WP_FEED_VERSION and
 # WP_FEED_SHA256 here and PKG_RELEASE.
 PKG_VERSION:=0.5.3
-PKG_RELEASE:=10
+PKG_RELEASE:=11
 
-WP_FEED_VERSION:=0.10.0
-WP_FEED_SHA256:=1fd2f0e829b917a958318ffd8ac76c6fed40a0fa66d798d8fae2a200e75482e4
+WP_FEED_VERSION:=0.10.1
+WP_FEED_SHA256:=508603a47d60a167da8c040bdc17e5f6a0d17916f9b6f2c1c2448dfedb400316
 WP_FEED:=https://service.nexwall.com.br/vendor/stable
 
 PKG_SOURCE:=nexwall-webprotection_$(WP_FEED_VERSION)_all.tar.gz
