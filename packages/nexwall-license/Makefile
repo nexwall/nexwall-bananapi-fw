@@ -22,11 +22,11 @@ PKG_LICENSE:=GPL-2.0-only
 # Versions differ per architecture: x86_64 follows the main product; the ARM builds (aarch64, arm) are pinned to the
 # last core built for them. Publish an ARM build of a newer core, then bump its pin here.
 VENDOR_CORE_VERSION_x86_64:=1.9.0
-VENDOR_CORE_VERSION_aarch64:=1.10.2
+VENDOR_CORE_VERSION_aarch64:=1.11.0
 VENDOR_CORE_VERSION_arm:=1.7.1
 VENDOR_CORE_VERSION:=$(VENDOR_CORE_VERSION_$(ARCH))
 VENDOR_CORE_SHA256_x86_64:=3dcaaea51b06fa3f13a1cc51df9ce4ce0b8b49fb8b4cffb423f1502fedb59733
-VENDOR_CORE_SHA256_aarch64:=3f0cf40d3ddaa7776f40980659468da70ae7a6783f15ec2dc841a0148324014a
+VENDOR_CORE_SHA256_aarch64:=a885a0deb62895e1965a4279c843983f5b41b056aaf24b6521b36fcfac2b5593
 VENDOR_CORE_SHA256_arm:=dcbb29ffc10b0164cf7037e019a88eeff99bea86b30e40d289bf5c9e7238332c
 VENDOR_FEED:=https://service.nexwall.com.br/vendor/stable
 
