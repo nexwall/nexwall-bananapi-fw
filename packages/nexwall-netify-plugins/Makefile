@@ -47,7 +47,7 @@ define Package/nexwall-netify-plugins
 	SECTION:=admin
 	CATEGORY:=Nexwall
 	TITLE:=Nexwall traffic engine plugins
-	DEPENDS:=+netifyd +libnetfilter-conntrack +libgcrypt +nexwall-license
+	DEPENDS:=+netifyd +libnetfilter-conntrack +libgcrypt +nexwall-license +libubox +libubus +libblobmsg-json
 	PKGARCH:=$(if $(CONFIG_NEXWALL_NETIFY_PLUGINS_VENDOR),$(ARCH_PACKAGES),all)
 endef
 
