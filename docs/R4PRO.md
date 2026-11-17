@@ -34,3 +34,13 @@ Needs the vendor tarballs in `vendor-local/` and about 65 GB of free disk for th
 ## Hardware notes
 - 4E: MT7988A, internal 2.5G PHY, MxL862 switch. 8X: MT7988A, Aeonsemi 10G PHY, MxL862 switch.
 - Switch driver (`kmod-dsa-mxl862xx`) and the device trees come from OpenWrt main.
+
+## Images built 2026-11-17 (private, not published)
+| Model | File | Size (bytes) | SHA-256 |
+|---|---|---|---|
+| 4E | sdcard.img.gz | 111,076,868 | `3ab681528323b1ce1860b293b73383001e7581dda49e4446ffa2adb5b045e418` |
+| 4E | squashfs-sysupgrade.itb | 109,314,335 | `819774dce4a0ec30f7fa2094efac97ef0532f3eaa8a5567628956e9551532ca3` |
+| 8X | sdcard.img.gz | 111,156,387 | `1c70df4b62f2867ba8400a56ccaf12d8833a67793761f2b20e6889acb25179a8` |
+| 8X | squashfs-sysupgrade.itb | 109,314,335 | `a37bd9358afa4f8141caa430c035315859cbb2a0540d1d7b62d7fbd8b229feed` |
+
+Checked by reading the root filesystem: Chinese UI, brand-file loader, `profile_inspection` (SSL inspection off by default), kernel 6.18.60 with the MxL862 switch driver. The userland boots in QEMU with a generic arm64 kernel; the board itself is not tested.
