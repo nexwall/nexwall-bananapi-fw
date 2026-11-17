@@ -3,6 +3,15 @@
 Record of modifications to files inherited from NethSecurity (upstream commit `9a60b9c`), kept to satisfy the
 "prominent notice of changes" requirement of GPL-2.0 section 2(a). Newest first.
 
+## 2026-11-16 (test branch `r4pro-main-test`, not a release)
+
+- **OpenWrt main test track** for the Banana Pi BPI-R4 Pro (4E and 8X): core pinned to a main commit, package feeds on
+  `openwrt-25.12`; patches adapted or dropped for main (base-files banner, openvpn, strongswan dpd, host Python without
+  `_curses`); packages whose ids clash with main's core dropped (sane-backends, tvheadend); Image Builder off.
+- **Vendor plugins**: the Nexwall traffic-engine plugins and the Snort gate are rebuilt against main's libraries
+  (`libubox`, `libubus`) and pinned as local `1.0.4-main` / `1.0.1-main` tarballs in `vendor-local/` (not published,
+  test only). New profiles `bananapi_bpi-r4-pro-4e` and `-8x`.
+
 ## 2026-09-20
 
 - **Sources**: `ns-ui`, `ns-monitoring`, `ns-dedalo` and `ns-checkmk-utils` are built from the Nexwall repositories,
