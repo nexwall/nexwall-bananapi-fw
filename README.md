@@ -10,6 +10,8 @@ Derived from `nexwall/firewall-msp` (version in `build.conf.defaults`); the chan
 | Banana Pi BPI-R4 Lite | `bananapi_bpi-r4-lite` | MT7987A | 2 GiB RAM, 8 GiB eMMC |
 | Banana Pi BPI-R4 | `bananapi_bpi-r4` | MT7988A | 4 GiB RAM, 8 GiB eMMC |
 | Banana Pi BPI-R4 (2.5GE variant) | `bananapi_bpi-r4-poe` | MT7988A | |
+| Banana Pi BPI-R4 Pro 4E | `bananapi_bpi-r4-pro-4e` | MT7988A | experimental, OpenWrt main (kernel 6.18), see `docs/R4PRO.md` |
+| Banana Pi BPI-R4 Pro 8X | `bananapi_bpi-r4-pro-8x` | MT7988A | experimental, OpenWrt main (kernel 6.18), see `docs/R4PRO.md` |
 
 The OpenWrt One has its own repository: `nexwall/nexwall-openwrt-one-fw`.
 

@@ -3,6 +3,13 @@
 Record of modifications to files inherited from NethSecurity (upstream commit `9a60b9c`), kept to satisfy the
 "prominent notice of changes" requirement of GPL-2.0 section 2(a). Newest first.
 
+## 2026-11-17 (branch `r4pro-main-26.2.1`, experimental)
+
+- **Rebased on the release pins**: the OpenWrt main track (BPI-R4 Pro 4E and 8X) now sits on top of `main` (`ce364ac`): license core 1.11.0
+  (brand-file loader, factory entitlement), UI 3.2.1 (Chinese), Web Protection 0.10.1 (profiles do not decrypt traffic by default)
+  and the feed host `service.nexwall.com.br`, the same pins as the five-board 26.2.1 set. Only the two plugin pins differ
+  (`1.0.4-main`, `1.0.1-main`). See `docs/R4PRO.md`.
+
 ## 2026-11-16 (test branch `r4pro-main-test`, not a release)
 
 - **OpenWrt main test track** for the Banana Pi BPI-R4 Pro (4E and 8X): core pinned to a main commit, package feeds on
